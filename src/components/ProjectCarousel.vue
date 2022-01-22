@@ -18,16 +18,9 @@
         <v-slide-item
           v-for="(project) in projects"
           :key="project"
-          v-slot="{ toggle }"
+          v-slot
         >
-          <v-card
-            :color="active ? 'primary' : 'grey lighten-1'"
-            height="200"
-            width="400"
-            class="rounded-0"
-            @click="toggle"
-          >
-          </v-card>
+          <ProjectCard/>
         </v-slide-item>
       </v-slide-group>
     </div>
@@ -35,8 +28,14 @@
 </template>
 
 <script>
+  import ProjectCard from './ProjectCard';
+
   export default {
     name: 'ProjectCarousel',
+
+    components: {
+      ProjectCard,
+    },
 
     data: () => ({
       projects: ["red", "blue", "green", "yellow", "grey", "pink", "cyan", "orange"],
