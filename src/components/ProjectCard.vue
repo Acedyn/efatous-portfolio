@@ -9,8 +9,11 @@
         height="200"
         width="400"
         class="rounded-0"
-        color="grey"
       >
+        <v-img
+          :src="image"
+        ></v-img>
+
       </v-btn>
     </template>
 
@@ -23,6 +26,13 @@
 
   export default {
     name: 'ProjectCard',
+
+    props: {
+        image: {
+            image: String,
+            required: true
+        },
+    },
 
     components: {
       ProjectDialog,

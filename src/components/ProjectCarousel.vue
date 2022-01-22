@@ -1,7 +1,7 @@
 <template>
   <div class="project-carousel">
     <v-banner>
-      <h4>This is a project</h4>
+      <h4>{{ this.project.name }}</h4>
     </v-banner>
     <v-slide-group
       show-arrows
@@ -14,11 +14,10 @@
       </template>
 
       <v-slide-item
-        v-for="(project) in projects"
-        :key="project"
-        v-slot
+        v-for="(image, idx) in project.images"
+        :key="idx"
       >
-        <ProjectCard/>
+        <ProjectCard :image="image"/>
       </v-slide-item>
     </v-slide-group>
   </div>
@@ -30,13 +29,26 @@
   export default {
     name: 'ProjectCarousel',
 
+    props: {
+        project: {
+            type: Object,
+            default: () => {}
+        },
+    },
+
     components: {
       ProjectCard,
     },
 
     data: () => ({
-      projects: ["red", "blue", "green", "yellow", "grey", "pink", "cyan", "orange"],
     }),
+
+   computed: {
+     projects(){
+       console.log(this.project);
+       return ["red", "blue", "green", "yellow", "grey", "pink", "cyan", "orange"];
+     }
+   }
   }
 </script>
 
