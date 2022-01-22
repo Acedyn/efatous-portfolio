@@ -8,6 +8,13 @@
         v-model="model"
         show-arrows
       >
+        <template v-slot:prev>
+          <!--- Remove the prev arrow --->
+        </template>
+        <template v-slot:next>
+          <!--- Remove the next arrow --->
+        </template>
+
         <v-slide-item
           v-for="(project) in projects"
           :key="project"
