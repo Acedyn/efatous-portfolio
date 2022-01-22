@@ -2,20 +2,20 @@
   <v-app>
     <Header/>
     <v-main>
-      <ProjectCarousel/>
+      <ProjectList/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import ProjectCarousel from './components/ProjectCarousel';
+import ProjectList from './components/ProjectList';
 import Header from './components/Header';
 
 export default {
   name: 'App',
 
   components: {
-    ProjectCarousel,
+    ProjectList,
     Header,
   },
 
@@ -24,3 +24,7 @@ export default {
   }),
 };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+</style>
