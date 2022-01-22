@@ -1,30 +1,27 @@
 <template>
-  <v-component>
-    <div class="project-carousel">
-      <v-banner>
-        <h4>This is a project</h4>
-      </v-banner>
-      <v-slide-group
-        v-model="model"
-        show-arrows
-      >
-        <template v-slot:prev>
-          <!--- Remove the prev arrow --->
-        </template>
-        <template v-slot:next>
-          <!--- Remove the next arrow --->
-        </template>
+  <div class="project-carousel">
+    <v-banner>
+      <h4>This is a project</h4>
+    </v-banner>
+    <v-slide-group
+      show-arrows
+    >
+      <template v-slot:prev>
+        <!--- Remove the prev arrow --->
+      </template>
+      <template v-slot:next>
+        <!--- Remove the next arrow --->
+      </template>
 
-        <v-slide-item
-          v-for="(project) in projects"
-          :key="project"
-          v-slot
-        >
-          <ProjectCard/>
-        </v-slide-item>
-      </v-slide-group>
-    </div>
-  </v-component>
+      <v-slide-item
+        v-for="(project) in projects"
+        :key="project"
+        v-slot
+      >
+        <ProjectCard/>
+      </v-slide-item>
+    </v-slide-group>
+  </div>
 </template>
 
 <script>

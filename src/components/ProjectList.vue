@@ -1,12 +1,10 @@
 <template>
-  <v-component>
-    <div class="project-view">
-      <ProjectCarousel
-        v-for="(project) in projects"
-        :key="project"
-        />
-    </div>
-  </v-component>
+  <div class="project-view">
+    <ProjectCarousel
+      v-for="(project) in projects"
+      :key="project"
+      />
+  </div>
 </template>
 
 <script>
@@ -27,7 +25,8 @@ export default {
 
 <style scoped>
   .project-view {
-    margin-left: 200px;
-    margin-right: 200px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
