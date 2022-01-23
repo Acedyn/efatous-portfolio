@@ -42,7 +42,8 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
 .media {
   max-height: 200px;
   width: auto;

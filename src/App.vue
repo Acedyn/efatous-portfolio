@@ -1,9 +1,11 @@
 <template>
   <v-app>
-    <Header/>
-    <v-main>
-      <ProjectList/>
-    </v-main>
+    <div class="background">
+      <Header/>
+      <v-main>
+        <ProjectList/>
+      </v-main>
+    </div>
   </v-app>
 </template>
 
@@ -29,5 +31,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 .v-application{
   font-family: 'Amatic SC', cursive;
+  background-image: url("./assets/background.jpg");
 }
+
+.background {
+  background-image: url("./assets/background.jpg");
+  background-repeat: repeat;
+  }
 </style>
