@@ -11,7 +11,7 @@
         class="rounded-0"
       >
         <v-img
-          :src="image"
+          :src="media"
         ></v-img>
 
       </v-btn>
@@ -28,7 +28,7 @@
     name: 'ProjectCard',
 
     props: {
-        image: {
+        media: {
             image: String,
             required: true
         },
@@ -40,6 +40,10 @@
 
     data: () => ({
     }),
+
+    mounted() {
+      console.log(this.media)
+    },
   }
 </script>
 

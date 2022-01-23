@@ -1,16 +1,1 @@
-[
-    {
-        "name": "Paintings",
-        "images": [
-            "projects/Paintings/painting-boat-01.jpg",
-            "projects/Paintings/painting-house-01.jpg"
-        ]
-    },
-    {
-        "name": "BLZFOEFJ",
-        "images": [
-            "projects/Paintings/painting-boat-01.jpg",
-            "projects/Paintings/painting-house-01.jpg"
-        ]
-    }
-]
+[{"name":"Paintings","doc":"","media":["/public/projects/Paintings/painting-boat-01.jpg","/public/projects/Paintings/painting-house-01.jpg","/public/projects/Paintings/painting-simon-01.jpg"]},{"name":"That was the plan","doc":"","media":["/public/projects/That was the plan/plan-colorboard-01.jpg","/public/projects/That was the plan/plan-concept-01.jpg","/public/projects/That was the plan/plan-concept-02.jpg","/public/projects/That was the plan/plan-concept-03.jpg","/public/projects/That was the plan/plan-concept-04.jpg"]},{"name":"Witchtober - 2020","doc":"","media":["/public/projects/Witchtober - 2020/witchtober-day-01.jpg","/public/projects/Witchtober - 2020/witchtober-day-02.jpg","/public/projects/Witchtober - 2020/witchtober-day-03.jpg","/public/projects/Witchtober - 2020/witchtober-day-04.jpg","/public/projects/Witchtober - 2020/witchtober-day-05.jpg","/public/projects/Witchtober - 2020/witchtober-day-06.jpg","/public/projects/Witchtober - 2020/witchtober-day-07.jpg","/public/projects/Witchtober - 2020/witchtober-day-08.jpg","/public/projects/Witchtober - 2020/witchtober-day-09.jpg"]}]

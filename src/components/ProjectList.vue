@@ -3,7 +3,7 @@
     <ProjectCarousel
       v-for="(project, idx) in projects"
       :key="idx"
-      :project="project"
+      :project="projects[idx]"
       />
   </div>
 </template>

@@ -14,10 +14,10 @@
       </template>
 
       <v-slide-item
-        v-for="(image, idx) in project.images"
+        v-for="(media, idx) in project.media"
         :key="idx"
       >
-        <ProjectCard :image="image"/>
+        <ProjectCard :media="media"/>
       </v-slide-item>
     </v-slide-group>
   </div>
@@ -32,7 +32,7 @@
     props: {
         project: {
             type: Object,
-            default: () => {}
+            required: true
         },
     },
 
@@ -42,13 +42,6 @@
 
     data: () => ({
     }),
-
-   computed: {
-     projects(){
-       console.log(this.project);
-       return ["red", "blue", "green", "yellow", "grey", "pink", "cyan", "orange"];
-     }
-   }
   }
 </script>
 
