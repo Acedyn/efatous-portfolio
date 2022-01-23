@@ -17,7 +17,7 @@
         v-for="(media, idx) in project.media"
         :key="idx"
       >
-        <ProjectCard :media="media"/>
+        <ProjectCard :media="media" :project="project"/>
       </v-slide-item>
     </v-slide-group>
   </div>
@@ -53,5 +53,6 @@
     font-family: 'Amatic SC', cursive;
     font-weight: normal;
     font-size: 20px;
+    text-align: center;
   }
 </style>

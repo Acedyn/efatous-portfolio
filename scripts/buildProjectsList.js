@@ -22,15 +22,18 @@ function getProjectContent(project) {
   const projectMedia = [];
 
   const projectPath = path.join(PROJECT_ROOT_DIR, project);
+
   fs.readdirSync(projectPath).forEach((projectData) => {
-    const projectDataPath = path.join(projectPath, projectData);
+    let projectDataPath = path.join(projectPath, projectData);
+    projectDataPath = projectDataPath.split(path.sep).join(path.posix.sep);
+    projectDataPath = projectDataPath.replace("public", "");
+
     if(path.extname(projectData) === ".md") {
       projectMarkdown = projectDataPath;
       return
     }
     else {
-      const mediaPath = projectDataPath.split(path.sep).join(path.posix.sep);
-      projectMedia.push(mediaPath.replace("public", ""));
+      projectMedia.push(projectDataPath);
     }
   });
   

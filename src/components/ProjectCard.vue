@@ -1,47 +1,41 @@
 <template>
   <v-dialog
-    width="500"
   >
     <template v-slot:activator="{ on, attrs }">
       <button
         v-bind="attrs"
         v-on="on"
-        height="200"
         class="rounded-0"
       >
-        <img
-          class="media"
-          v-if="mediaType === 'image'"
-          :src="media"
-        >
-        <video autoplay muted
-          class="media"
-          v-if="mediaType === 'video'"
-        >
-          <source :src="media" type="video/mp4">
-        </video>
+        <MediaPlayer class="media" :media="media"/>
       </button>
     </template>
 
-    <ProjectDialog/>
+    <ProjectDialog :project="project"/>
   </v-dialog>
 </template>
 
 <script>
   import ProjectDialog from './ProjectDialog';
+  import MediaPlayer from './MediaPlayer';
 
   export default {
     name: 'ProjectCard',
 
     props: {
         media: {
-            image: String,
+            type: String,
+            required: true
+        },
+        project: {
+            type: Object,
             required: true
         },
     },
 
     components: {
       ProjectDialog,
+      MediaPlayer,
     },
 
     data: () => ({
@@ -52,7 +46,6 @@
        const splitedMedia = this.media.split(".");
        const extension = splitedMedia[splitedMedia.length - 1];
 
-      console.log(extension)
       const videoExtensions = ["mp4", "mov", "avi", "webv"];
        if (videoExtensions.includes(extension) ){
           return "video";
@@ -67,10 +60,8 @@
 <style scoped lang="scss">
 
 .media {
-  max-height: 200px;
-  width: auto;
+  height: 200px;
 }
-
 .media:hover {
     -webkit-filter: brightness(70%);
     -webkit-transition: all 0.5s ease;

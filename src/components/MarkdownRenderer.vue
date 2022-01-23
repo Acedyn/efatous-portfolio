@@ -1,6 +1,5 @@
 <template>
   <div>
-    <textarea v-model="markdown"></textarea>
     <div v-html="markdownToHtml"></div>
   </div>
 </template>
@@ -10,11 +9,16 @@ import { marked } from 'marked';
 
 export default {
   name: 'MarkdownRenderer',
- data(){
-   return {
-     markdown:  "# Hello World",
-   };
- },
+
+    props: {
+        markdown: {
+            type: String,
+            required: true
+        },
+    },
+
+    data: () => ({
+    }),
  computed: {
    markdownToHtml(){
      return marked(this.markdown);

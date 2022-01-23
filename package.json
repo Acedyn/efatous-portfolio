@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@hrwg/vue-marked": "^0.0.2",
+    "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "marked": "^4.0.10",
     "vue": "^2.6.11",
