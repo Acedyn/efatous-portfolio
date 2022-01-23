@@ -29,8 +29,8 @@ function getProjectContent(project) {
       return
     }
     else {
-      const mediaPath = path.sep + projectDataPath;
-      projectMedia.push(mediaPath.split(path.sep).join(path.posix.sep));
+      const mediaPath = projectDataPath.split(path.sep).join(path.posix.sep);
+      projectMedia.push(mediaPath.replace("public", ""));
     }
   });
   

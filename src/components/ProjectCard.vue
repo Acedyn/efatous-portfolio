@@ -7,13 +7,12 @@
         v-bind="attrs"
         v-on="on"
         height="200"
-        width="400"
         class="rounded-0"
       >
-        <v-img
+        <img
+          class="media"
           :src="media"
-        ></v-img>
-
+        >
       </v-btn>
     </template>
 
@@ -40,14 +39,14 @@
 
     data: () => ({
     }),
-
-    mounted() {
-      console.log(this.media)
-    },
   }
 </script>
 
 <style scoped>
+.media {
+  max-height: 200px;
+  width: auto;
+}
 </style>
 
 

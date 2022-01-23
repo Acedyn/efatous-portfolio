@@ -27,4 +27,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+.v-application{
+  font-family: 'Amatic SC', cursive;
+}
 </style>

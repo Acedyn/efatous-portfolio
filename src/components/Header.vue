@@ -1,18 +1,21 @@
 <template>
   <div class="header">
     <v-app-bar
-      elevation="0"
+      elevation="1"
       color="white"
     >
-      <v-spacer></v-spacer>
-        <v-col>
-          <v-app-bar-title>
-            EMILIE FATOUS
-            <br/>
-            2D Animation Student
-          </v-app-bar-title>
-        </v-col>
-      <v-spacer></v-spacer>
+      <v-col
+        cols="auto"
+        class="mr-auto"
+      >
+        <h1>EMILIE FATOUS</h1>
+        <h2>2D Animation student</h2>
+      </v-col>
+      <v-col
+        cols="auto"
+      >
+        <v-btn>Contact me</v-btn>
+      </v-col>
     </v-app-bar>
   </div>
 </template>
@@ -28,11 +31,16 @@
 
 <style scoped>
   .header {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(100, 100, 100, .2);
-    font-family: 'Amatic SC', cursive;
-    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 120%;
     font-weight: bold;
+  }
+
+  h2 {
+    font-size: 80%;
+    font-weight: normal;
   }
 </style>
