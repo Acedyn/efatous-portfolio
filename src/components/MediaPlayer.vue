@@ -1,7 +1,8 @@
 <template>
-  <div class="media">
+  <div>
     <img
       class="media"
+      :style="mediaStyle"
       v-if="mediaType === 'image'"
       :src="media"
     >
@@ -23,6 +24,10 @@
             type: String,
             required: true
         },
+        maxHeight: {
+            type: String,
+            default: "100%"
+        },
     },
 
     data: () => ({
@@ -39,7 +44,10 @@
          }
 
         return "image";
-     }
+     },
+     mediaStyle(){
+      return `max-height: ${this.maxHeight}`
+    }
    }
   }
 </script>
@@ -48,7 +56,10 @@
 
 
 .media {
-  height: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
   width: auto;
 }
 </style>

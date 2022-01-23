@@ -9,6 +9,7 @@
         :continuous="false"
         :show-arrows="false"
         hide-delimiter-background
+        height="80%"
         delimiter-icon="mdi-minus"
       >
         <v-carousel-item
@@ -19,7 +20,7 @@
             height="100%"
             tile
           >
-            <MediaPlayer :media="slide"/>
+            <MediaPlayer :media="slide" maxHeight="500px"/>
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
@@ -43,6 +44,10 @@
             type: Object,
             required: true
         },
+        index: {
+            type: Number,
+            required: true
+        },
     },
 
     components: {
@@ -58,13 +63,15 @@
     axios
       .get(this.project.doc)
       .then(response => (this.markdown = response.data))
-    }
+    },
   }
 </script>
 
 <style scoped>
 .carousel {
   width: 100%;
+  height: auto;
+  max-height: 500px;
 }
 h4{
   font-family: 'Amatic SC', cursive;

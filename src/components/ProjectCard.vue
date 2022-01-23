@@ -11,7 +11,7 @@
       </button>
     </template>
 
-    <ProjectDialog :project="project"/>
+    <ProjectDialog :project="project" :index="mediaIndex"/>
   </v-dialog>
 </template>
 
@@ -42,18 +42,16 @@
     }),
 
   computed: {
-     mediaType(){
-       const splitedMedia = this.media.split(".");
-       const extension = splitedMedia[splitedMedia.length - 1];
+     mediaIndex(){
+       this.project.media.forEach((media, index) => {
+          if(media === this.media) {
+            return index;
+            }
+         })
 
-      const videoExtensions = ["mp4", "mov", "avi", "webv"];
-       if (videoExtensions.includes(extension) ){
-          return "video";
-         }
-
-        return "image";
+       return 0
      }
-   }
+   },
   }
 </script>
 
