@@ -62,7 +62,6 @@
 
     methods: {
       next () {
-        console.log(this.model)
         this.model = this.model + 1 === this.project.media.length
           ? 0
           : this.model + 1
