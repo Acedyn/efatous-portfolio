@@ -5,6 +5,7 @@
     </v-card-title>
 
       <v-carousel
+        light
         class="carousel"
         :continuous="false"
         :show-arrows="false"
@@ -55,14 +56,17 @@
         MediaPlayer,
     },
 
-    data: () => ({
-      markdown: "# HOORO"
-    }),
+    computed: {
+       markdown(){
+         return `## ${this.project.name}`;
+      }
+    },
 
     mounted () {
-    axios
-      .get(this.project.doc)
-      .then(response => (this.markdown = response.data))
+      if(!this.project.doc){return;}
+      axios
+        .get(this.project.doc)
+        .then(response => (this.markdown = response.data))
     },
   }
 </script>
@@ -75,11 +79,13 @@
 }
 h4{
   font-family: 'Amatic SC', cursive;
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .markdown {
   margin-top: 30px;
+  font-size: 20px;
 }
 
 </style>

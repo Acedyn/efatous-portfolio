@@ -14,18 +14,35 @@
       <v-col
         cols="auto"
       >
-        <v-btn>Contact me</v-btn>
+
+        <v-dialog
+        >
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              v-on="on"
+              v-bind="attrs"
+            >Contact me</v-btn>
+          </template>
+
+          <CVDialog/>
+        </v-dialog>
       </v-col>
     </v-app-bar>
   </div>
 </template>
 
 <script>
+  import CVDialog from './CVDialog';
+
   export default {
     name: 'Header',
 
     data: () => ({
     }),
+
+    components: {
+        CVDialog,
+    },
   }
 </script>
 

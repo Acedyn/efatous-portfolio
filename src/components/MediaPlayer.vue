@@ -8,6 +8,7 @@
     >
     <video autoplay loop muted
       class="media"
+      :style="mediaStyle"
       v-if="mediaType === 'video'"
     >
       <source :src="media" type="video/mp4">
@@ -53,8 +54,6 @@
 </script>
 
 <style>
-
-
 .media {
   display: block;
   margin: auto;
