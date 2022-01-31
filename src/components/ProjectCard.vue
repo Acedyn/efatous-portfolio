@@ -7,7 +7,7 @@
         v-on="on"
         class="rounded-0"
       >
-        <MediaPlayer class="media" :media="media"/>
+        <MediaPlayer class="media" :media="media" autoplay/>
       </button>
     </template>
 

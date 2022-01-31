@@ -9,7 +9,6 @@
         v-model="index"
         class="carousel"
         :continuous="false"
-        :show-arrows="false"
         hide-delimiter-background
         height="80%"
         delimiter-icon="mdi-minus"

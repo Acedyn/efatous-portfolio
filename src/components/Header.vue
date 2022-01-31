@@ -15,8 +15,7 @@
         cols="auto"
       >
 
-        <v-dialog
-        >
+        <v-dialog class="popup">
           <template v-slot:activator="{ on, attrs }">
             <v-btn
               v-on="on"
@@ -60,4 +59,11 @@
     font-size: 80%;
     font-weight: normal;
   }
+
+.popup{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
 </style>

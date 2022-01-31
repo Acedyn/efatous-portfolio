@@ -6,7 +6,7 @@
       v-if="mediaType === 'image'"
       :src="media"
     >
-    <video autoplay loop muted
+    <video :autoplay="autoplay ? true : false" :loop="autoplay ? true : false" :muted="autoplay ? true : false" :controls="autoplay ? false : true"
       class="media"
       :style="mediaStyle"
       v-if="mediaType === 'video'"
@@ -24,6 +24,10 @@
         media: {
             type: String,
             required: true
+        },
+        autoplay: {
+            type: Boolean,
+            default: false
         },
         maxHeight: {
             type: String,

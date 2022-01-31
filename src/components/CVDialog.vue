@@ -1,9 +1,6 @@
 <template>
-  <v-card>
-    <v-card-title class="grey lighten-2 card-title">
-      <h4>Emilie FATOUS</h4>
-    </v-card-title>
-    <img src="@/assets/cv-emilie.jpg"/>
+  <v-card color="#9c9597">
+    <img src="@/assets/cv-emilie.png"/>
   </v-card>
 </template>
 
@@ -21,7 +18,12 @@ h4{
 }
 
 img{
-  width: inherit;
+  display: block;
+  max-height: 90vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 </style>
 
