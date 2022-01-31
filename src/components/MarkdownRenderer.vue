@@ -17,8 +17,6 @@ export default {
         },
     },
 
-    data: () => ({
-    }),
  computed: {
    markdownToHtml(){
      return marked(this.markdown);

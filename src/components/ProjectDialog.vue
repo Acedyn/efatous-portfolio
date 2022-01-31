@@ -56,11 +56,9 @@
         MediaPlayer,
     },
 
-    computed: {
-       markdown(){
-         return `## ${this.project.name}`;
-      }
-    },
+    data: () => ({
+      markdown: ""
+    }),
 
     mounted () {
       if(!this.project.doc){return;}
