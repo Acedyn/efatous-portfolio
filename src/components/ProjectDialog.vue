@@ -6,6 +6,7 @@
 
       <v-carousel
         light
+        v-model="index"
         class="carousel"
         :continuous="false"
         :show-arrows="false"

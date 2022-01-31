@@ -11,7 +11,7 @@
       </button>
     </template>
 
-    <ProjectDialog :project="project" :index="mediaIndex"/>
+    <ProjectDialog :project="project" :index="index"/>
   </v-dialog>
 </template>
 
@@ -31,27 +31,16 @@
             type: Object,
             required: true
         },
+        index: {
+            type: Number,
+            required: true
+        },
     },
 
     components: {
       ProjectDialog,
       MediaPlayer,
     },
-
-    data: () => ({
-    }),
-
-  computed: {
-     mediaIndex(){
-       this.project.media.forEach((media, index) => {
-          if(media === this.media) {
-            return index;
-            }
-         })
-
-       return 0
-     }
-   },
   }
 </script>
 

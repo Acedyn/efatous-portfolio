@@ -16,7 +16,7 @@
           :color="active ? 'teal lighten-2' : 'grey lighten-1'"
           class="ma-4"
         >
-          <ProjectCard :media="media" :project="project"/>
+          <ProjectCard :media="media" :project="project" :index="idx"/>
         </v-card>
       </v-slide-item>
 
