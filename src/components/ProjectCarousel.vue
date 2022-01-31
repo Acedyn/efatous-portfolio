@@ -13,7 +13,7 @@
         v-slot:default="{ active }"
       >
         <v-card
-          :color="active ? 'teal lighten-2' : 'grey lighten-1'"
+          :color="active ? 'teal lighten-2' : 'transparent'"
           class="ma-4"
         >
           <ProjectCard :media="media" :project="project" :index="idx"/>
