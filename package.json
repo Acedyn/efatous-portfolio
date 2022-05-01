@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "generate": "node ./scripts/buildProjectsList.js",
     "build": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint"
   },
